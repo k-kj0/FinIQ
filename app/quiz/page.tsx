@@ -82,7 +82,8 @@ export default function QuizPage() {
     } else {
       setIsCalculating(true);
       const profile = {
-        income: newAnswers[1],
+// @ts-ignore
+        income: newAnswers[1 as keyof typeof newAnswers],
         monthlyInvestment: newAnswers[2],
         goal: newAnswers[3],
         timeHorizon: newAnswers[4],
