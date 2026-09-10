@@ -1,11 +1,11 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
-import { TrendingUp, Shield, Users, ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { STATS } from '@/lib/data';
 import { storage } from '@/lib/storage';
 
@@ -62,7 +62,6 @@ export default function LandingPage() {
 
   return (
     <main className="relative min-h-screen overflow-hidden animated-gradient">
-      {/* Particle Background */}
       {init && (
         <Particles
           id="tsparticles"
@@ -71,13 +70,11 @@ export default function LandingPage() {
         />
       )}
 
-      {/* Gradient Orbs */}
       <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-[120px] animate-float" />
       <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[120px] animate-float" style={{ animationDelay: '3s' }} />
 
-      {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-20">
-        {/* Badge */}
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -90,7 +87,6 @@ export default function LandingPage() {
           </div>
         </motion.div>
 
-        {/* Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -102,17 +98,15 @@ export default function LandingPage() {
           <span className="text-accent">Start growing.</span>
         </motion.h1>
 
-        {/* Subtext */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-gray-400 text-center max-w-2xl mb-12 leading-relaxed"
         >
-          India&apos;s first AI that builds your personal investment roadmap in 60 seconds
+          AI that builds your personal investment roadmap in 60 seconds
         </motion.p>
 
-        {/* CTA Button */}
         <motion.button
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -128,7 +122,6 @@ export default function LandingPage() {
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </motion.button>
 
-        {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -149,14 +142,13 @@ export default function LandingPage() {
           ))}
         </motion.div>
 
-        {/* Disclaimer */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
           className="mt-12 text-xs text-gray-600 text-center max-w-md"
         >
-          Past performance is not a guarantee of future returns. Investments are subject to market risks.
+          This is a demo project. Not financial advice. Investments are subject to market risks.
         </motion.p>
       </div>
     </main>
