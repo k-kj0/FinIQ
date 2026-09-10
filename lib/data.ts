@@ -39,7 +39,8 @@ export const NIFTY = {
   changeValue: 278.5,
 };
 
-export const MARKET_SUMMARY = "Markets are bullish with strong buying in IT and banking sectors. Nifty crossed 22,800 with broad-based participation.";
+export const MARKET_SUMMARY =
+  "Markets are bullish with strong buying in IT and banking sectors. Nifty crossed 22,800 with broad-based participation.";
 
 export const FEATURES = [
   "Unlimited AI-powered recommendations",
@@ -51,7 +52,7 @@ export const FEATURES = [
 ];
 
 export const STATS = [
-  { value: "₹2.3Cr", label: "avg portfolio growth" },
-  { value: "94%", label: "accuracy on MF picks" },
-  { value: "47,000+", label: "investors" },
+  { value: "60s", label: "to your personalized investment plan" },
+  { value: "5+", label: "risk profiles supported" },
+  { value: "Free", label: "personalized roadmap, no sign-up needed" },
 ];
